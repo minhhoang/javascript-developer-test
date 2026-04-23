@@ -11,7 +11,7 @@ const mapTheResponsesToTheResults = (response) => {
 const getArnieQuotes = async (urls) => {
   const res = await Promise.all(urls.map(url => httpGet(url)));
   const results = res.map(mapTheResponsesToTheResults);
-  console.log(results);
+
   return results;
 };
 
